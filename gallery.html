@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="photo-gallery">
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div class="photo-gallery-container">
+            <button class="gallery-control" onclick="prevImage()">❮</button>
+            <div class="photo" id="gallery-image-container">
+                <img src="https://image.cnbcfm.com/api/v1/image/107265407-1688135396423-gettyimages-1361412494-AFP_33LW23N.jpeg?v=1688140142&w=740&h=416&ffmt=webp&vtcrop=y" alt="Photo description" id="current-image">
+            </div>
+            <button class="gallery-control" onclick="nextImage()">❯</button>
+        </div>
+
+        <!-- Repeat for each photo -->
+    </main>
+
+    <script>
+        const images = [
+            "https://image.cnbcfm.com/api/v1/image/107265407-1688135396423-gettyimages-1361412494-AFP_33LW23N.jpeg?v=1688140142&w=740&h=416&ffmt=webp&vtcrop=y",
+            "https://assets.teenvogue.com/photos/630e5e8e5c215466a35210f9/16:9/w_2240,c_limit/GettyImages-1417997536.jpg",
+            "https://bloximages.newyork1.vip.townnews.com/richmond.com/content/tncms/assets/v3/editorial/a/29/a29f1132-1a7a-11ee-99ed-4764d591a60a/64a432e99e852.image.jpg?resize=1200%2C800",
+            "https://www.wowt.com/resizer/lG8gNAZasFvBUElxgzVLAG9cWD0=/arc-photo-gray/arc3-prod/public/N5POTOSHIFDATNPMKBXF2PEMTU.jpg"
+        ];
+
+        let currentIndex = 0;
+        const imageContainer = document.getElementById("current-image");
+
+        function showImage(index) {
+            imageContainer.src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Show the first image on page load
+        showImage(currentIndex);
+
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

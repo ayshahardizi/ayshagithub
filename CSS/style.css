@@ -1,0 +1,172 @@
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: solid;
+    background-color: grey;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-decoration: none; /* Ensure no underlines on links */
+}
+
+/* Styles for the article page navigation */
+.article-page-nav ul li a {
+    color: black;
+}
+
+.article-content h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #000000;
+    margin-bottom: 10px; /* Add space below the title */
+}
+
+
+/* Styles for the second article title */
+.article-content h2:first-of-type {
+    border: 2px solid #333; /* Add a border around the first h2 */
+    padding: 10px; /* Add padding to create space around the border */
+}
+
+/* Styles for the author name */
+.article-content p:first-of-type {
+    border: 1px solid #666; /* Add a border around the first p */
+    padding: 5px; /* Add padding to create space around the border */
+}
+
+/* General styles for other article titles and paragraphs */
+.article-content h2:not(:first-of-type) {
+    font-size: 18px; /* Set font size for other h2 elements */
+}
+
+.article-content p:not(:first-of-type) {
+    margin-bottom: 15px; /* Set margin for other p elements */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    padding: 10px;
+}
+
+
+/* Main Content Styles */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio between main content and sidebar */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-color: #000000;
+}
+footer p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+/* Article Header Styles */
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid; color: #000000;
+    background-color:#000000;
+}
+.article-header h1 {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.article-header p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+/* Article Content Styles */
+.article-content {
+    display: grid; 
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    padding: 20px;
+   
+}
+
+/* Sidebar Styles */
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Advertisement Styles */
+.advertisement {
+    padding: 20px;
+    border: 1px solid #dd1d1d;
+    background-color: #dd1d1d;
+    text-align: center;
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.photo img {
+    width: 100%; /* Fully responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Gallery Controls Styles */
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /* Initially hide navigation items */
+    }
+
+    /* When clicking the hamburger menu, use JavaScript to toggle this class to display the items */
+    nav ul.active {
+        display: flex; /* Display navigation items in a column */
+    }
+}

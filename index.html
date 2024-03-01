@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>The Urban Herald</h1> 
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <section class="Featured-article">
+            <h2>Featured Article</h2>
+            <article>
+                <h3>Forgiving Student Loans: A New Horizon in Education</h3>
+                <p>By Maria Perez</p>
+                <p>In an unprecedented move, policymakers are contemplating significant changes to the education landscape by championing the cause of forgiving student loans...</p>
+                <a href="article.html">Read More</a>
+            </article>
+        </section>
+        <section class="Latest-News">
+            <h2>Latest News</h2>
+            <article>
+                <h3>New Funding for STEM Education Initiative</h3>
+                <p>Government allocates additional funds to boost Science, Technology, Engineering, and Mathematics (STEM) education nationwide...</p>
+                <a href="article.html">Read More</a>
+            </article>
+            <article>
+                <h3>Local Community Celebrates Environmental Awareness Month</h3>
+                <p>Citizens come together to promote sustainable practices and raise awareness about environmental issues...</p>
+                <a href="article.html">Read More</a>
+            </article>
+            <!-- Add more news articles as needed -->
+        </section>
+    </main>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+    <footer>
+        <p>Contact us at ex@gmail.com</p>
+    </footer>
+</body>
+</html>
